@@ -1,0 +1,7 @@
+{
+  "name": "AppIbam",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

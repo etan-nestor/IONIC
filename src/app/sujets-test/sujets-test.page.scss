@@ -1,0 +1,215 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ion-header{
+  background:#fff;
+  
+  .card-back{
+    background:#f67925;
+    height: 80px;
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+
+    ion-button{
+      &.menu{
+        margin: 10px 0px 0px 0px;
+      }
+      &.panier{
+        margin: 10px 0px 0px 140px;
+      }
+    }
+    
+  }
+}
+ion-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  --background:Azure;
+  font-family: 'Poppins',sans-serif;
+  --color: #000;
+
+  .container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    transform-style: preserve-3d;
+
+    & .box{
+      position: relative;
+      width: 108px;
+      height: 200px;
+      margin: 10px;
+      background:#fff;
+      border-radius: 20px;
+      transform-style: preserve-3d;
+      cursor: pointer;
+
+      &::before{
+        content: 'IBAM';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 700;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      &::after{
+        content: 'PDF';
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 700;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      &:hover::before,&:hover::after{
+        opacity: 0.04;
+      }
+      & .sujet{
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        transform: translate3d(0,0,75px);
+        transition: 0.5s;
+        opacity: 0;
+        z-index: 10;
+        transform-style: preserve-3d;
+        
+      }
+      &:hover .sujet{
+        top: 20px;
+        opacity: 1;
+      }
+      & h6{
+        position: absolute;
+        top: 15px;
+        left: 0;
+        color: aqua;
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+        transform: translate3d(0,0,75px);
+        transition: 0.5s;
+        transform-style: preserve-3d;
+      }
+      & p{
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        color: rgb(60, 0, 255);
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+        transform: translate3d(0,0,75px);
+        transition: 0.5s;
+        transform-style: preserve-3d;
+      }
+      &:hover h6{
+        top: -25px;
+        opacity: 0;
+      }
+      &:hover p{
+        bottom: -25px;
+        opacity: 0;
+      }
+      & .buy{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform-style: preserve-3d;
+        transform: translate3d(-50%,0,75px);
+        text-decoration: none;
+        background: #333;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 30px;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      &:hover .buy{
+        bottom: 10px;
+        opacity: 1;
+      }
+      & .circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+        transition: 0.5s;
+        background: #0fe8d9;
+        transform-style: preserve-3d;
+        transform: translate3d(-50%,-50%,50px);
+        z-index: 10;
+        opacity: 1;
+      }
+      & .pdf{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 300px;
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        z-index: 11;
+        transform: translate3d(-50%,-50%,50px) rotate(-15deg);
+      }
+
+    &:hover .pdf{
+      transform: translate3d(-50%,-50%,100px) rotate(-15deg);
+    }
+
+      &:nth-child(1) h6{
+        color: #d9f505;
+      }
+      &:nth-child(2) h6{
+        color: #05e1f5;
+      }
+      &:nth-child(3) h6{
+        color: #48ae43;
+      }
+      &:nth-child(4) h6{
+        color: #f5ed03;
+      }
+
+      &:nth-child(1) .circle,
+      &:nth-child(1) .buy{
+        background: #d9f505;
+      }
+      &:nth-child(2) .circle,
+      &:nth-child(2) .buy{
+        background: #05e1f5;
+      }
+      &:nth-child(3) .circle,
+      &:nth-child(3) .buy{
+        background: #48ae43;
+      }
+      &:nth-child(4) .circle,
+      &:nth-child(4) .buy{
+        background: #f5ed03;
+      }
+    }
+
+  }
+}

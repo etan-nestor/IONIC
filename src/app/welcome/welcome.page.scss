@@ -1,0 +1,64 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ion-content{
+    --background:#fff;
+    --color: #000;
+
+    .container{
+        min-height: 80vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .pict{
+            border: none;
+            border-radius: 10px;
+            width: 250px;
+            cursor: pointer;
+            img{
+                margin: 25px 15px 5px 15px;
+                height: 170px;
+            }
+        }
+        .choice{
+            width: 100%;
+            text-align: center;
+            marquee{
+                color: bisque;
+                font-weight: bold;
+                font-size: 18px;
+                margin: 10px 0px 20px 0px;
+            }
+            
+            }
+     
+        .text{
+            padding: 0px 28px 10px 28px;
+            font-family: 'Amperzand',sans-serif;
+            font-size: 18px;
+        }
+        .navigate{
+            margin-top: 30px;
+            .n-bachelier{
+                padding: 0px 0px 10px 0px;
+
+                ion-button{
+                    & ion-icon{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .etudiant{
+                ion-button{
+                    & ion-icon{
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+        }
+    }
+}

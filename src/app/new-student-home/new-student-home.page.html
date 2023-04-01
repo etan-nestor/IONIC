@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+<ion-title>Home</ion-title>
+  </ion-toolbar>
+  <div class="card-back">
+    <ion-button fill="clear" class="menu">
+      <ion-icon slot="icon-only" name="menu" ></ion-icon>
+    </ion-button>
+  </div>
+    <div class="user-profil">
+      <ion-card>
+        <ion-avatar>
+          <ion-img src="../../assets/images/1 (23).png" alt="user"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2>Rahimo</h2>
+          <p>12345678</p>
+        </ion-label>
+        <div class="icon">
+          <ion-button fill="clear">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card>
+    </div>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <div class="rubrique">
+      <div class="static">
+        <ion-card (click)="infos_ibam()">
+            <ion-img src="../../assets/icon/info_100px.png" alt=""></ion-img>
+            <p>Infos IBAM</p>
+        </ion-card>
+        <ion-card (click)="sujets_test()">
+          <ion-img src="../../assets/icon/doc_100px.png" alt=""></ion-img>
+          <p>Sujets du Test</p>
+        </ion-card>
+      </div>
+    </div>
+    <ion-item>
+      <p>Sujets en cours</p>
+    </ion-item>
+    <div class="rubrique">
+      <div class="dynamic">
+        <ion-card>
+          <ion-img src="../../assets/icon/pdf1.png" alt=""></ion-img>
+          <h2>ADB</h2>
+          <p>Anglais 2022</p>
+        </ion-card>
+        <ion-card>
+          <ion-img src="../../assets/icon/pdf1.png" alt=""></ion-img>
+          <h2>MIAGE</h2>
+          <p>Analyse 2023</p>
+        </ion-card>
+      </div>
+    </div>
+    <div class="footer">
+      <ion-card>
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="help-circle"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="notifications"></ion-icon>
+        </ion-button>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

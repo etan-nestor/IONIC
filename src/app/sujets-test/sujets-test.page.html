@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="new-student-home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sujets-test</ion-title>
+  </ion-toolbar>
+  <div class="card-back">
+    <ion-button fill="clear" class="menu">
+      <ion-icon slot="icon-only" name="menu" ></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="panier" (click)="panier()">
+      <ion-icon slot="icon-only" name="cart"></ion-icon>
+    </ion-button>
+  </div>
+</ion-header>
+
+<ion-content [scrollEvents]="true">
+  <div class="container" >
+    <div class="box">
+      <h5 class="sujet">Francais 2021</h5>
+      <h6>MIAGE</h6>
+      <a href="" class="buy">Acheter</a>
+      <p>3 000 Fcfa</p>
+      <div class="circle"></div>
+      <ion-img src="../../assets/icon/pdf1.png" class="pdf" alt=""></ion-img>
+    </div>
+    <div class="box">
+      <h5 class="sujet">Francais 2021</h5>
+      <h6>ADB</h6>
+      <a href="" class="buy">Acheter</a>
+      <p>3 000 Fcfa</p>
+      <div class="circle"></div>
+      <ion-img src="../../assets/icon/pdf1.png" class="pdf" alt=""></ion-img>
+    </div>
+    <div class="box">
+      <h5 class="sujet">Francais 2021</h5>
+      <h6>MID</h6>
+      <a href="" class="buy">Acheter</a>
+      <p>3 000 Fcfa</p>
+      <div class="circle"></div>
+      <ion-img src="../../assets/icon/pdf1.png" class="pdf" alt=""></ion-img>
+    </div>
+    <div class="box" >
+      <h5 class="sujet">Francais 2021</h5>
+      <h6>MG</h6>
+      <a href="" class="buy">Acheter</a>
+      <p>3 000 Fcfa</p>
+      <div class="circle"></div>
+      <ion-img src="../../assets/icon/pdf1.png" class="pdf" alt=""></ion-img>
+    </div>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Chargement...">
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

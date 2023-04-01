@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="welcome"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <div class="content">
+    <div class="login-div">
+      <div class="logo">
+        <img src="../../assets/images/all/logoProjet.png" alt="">
+      </div>
+      <div class="title">
+        Welcome 💦!
+      </div>
+      <div class="sub-title">
+        Sing In to Continue
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="email">
+             <ion-icon name="send"></ion-icon>
+            <ion-input type="email" clear-input placeholder="Email">
+            </ion-input>
+          </div>
+          <div class="username">
+            <ion-icon name="person"></ion-icon>
+            <ion-input type="text" clear-input placeholder="Username">
+            </ion-input>
+          </div>
+          <div class="password" >
+            <ion-icon name="eye"></ion-icon>
+            <ion-input type="password" clear-input placeholder="Password">
+            </ion-input>
+          </div>
+        </form>
+      </div>
+      <ion-button shape="round" color="primary">Sing In</ion-button>
+      <span>Create account ?<a (click)="sign_up()"> Sign Up</a></span>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="splash-screen"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <div class="container">
+    <div class="pict">
+      <img src="../../assets/images/1 (23).png" alt="">
+    </div>
+    <div class="text">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ab perspiciatis nulla, ipsum animi perferendis, <a href="./splashscreen">more information</a></p>
+    </div>
+    <div class="choice">
+      <marquee behavior="" direction="">Navigate Likely New Student Or Student</marquee>
+    </div>
+    <div class="navigate">
+      <div class="n-bachelier">
+        <ion-button color="secondary" (click)="n_student()">
+          <ion-icon name="send" slot="start"></ion-icon>
+          New Student
+        </ion-button>
+      </div>
+      <div class="etudiant">
+        <ion-button (click)="student()">
+          <ion-icon name="send" slot="start"></ion-icon>
+          Student
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

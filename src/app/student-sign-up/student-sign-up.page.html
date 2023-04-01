@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="welcome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Etudiant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+ <div class="content">
+    <div class="container">
+    <!-- Formulaire -->
+      <form action="">
+        <p>WELCOME</p>
+        <ion-input type="text" placeholder="INE" clear-input id="INE"></ion-input>
+        <ion-input type="text" placeholder="Username" clear-input id="username"></ion-input>
+        <ion-input type="text" placeholder="email" clear-input id="email"></ion-input>
+        <ion-input type="password" placeholder="Password" clear-input id="password"></ion-input>
+        <ion-button shape="round" (click)="sign_up()">Sign Up</ion-button><br>
+      </form>
+        <!-- Ombres -->
+        <div class="ombre o1"></div>
+        <div class="ombre o2"></div>
+        <div class="ombre o3">
+          <span class ='account'>Have you account ?<a (click)="sign_in()"> Sign In</a></span>
+        </div>
+        <div class="ombre o4"></div>
+    </div>
+  </div>
+</ion-content>
