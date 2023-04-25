@@ -79,6 +79,14 @@ const routes: Routes = [
     path: 'quiz',
     loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
   },
+  {
+    path: 'notification-n',
+    loadChildren: () => import('./notification-n/notification-n.module').then( m => m.NotificationNPageModule)
+  },
+  {
+    path: 'quiz-n',
+    loadChildren: () => import('./quiz-n/quiz-n.module').then( m => m.QuizNPageModule)
+  },
 ];
 
 @NgModule({

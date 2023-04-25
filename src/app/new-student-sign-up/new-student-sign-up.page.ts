@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-new-student-sign-up',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewStudentSignUpPage implements OnInit {
 
-  constructor() { }
+  constructor(public nc:NavController) { }
 
   ngOnInit() {
   }
-
+  async sign_in() {
+    this.nc.navigateForward('/login')
+  }
 }
