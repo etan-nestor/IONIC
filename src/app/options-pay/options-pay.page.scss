@@ -16,6 +16,7 @@ ion-content{
         text-align:center;
         margin-top:-280px;
         cursor:pointer;
+
         p{
         padding-top:5px;
         }
@@ -24,16 +25,59 @@ ion-content{
       .choice{
         margin-left:30px;
         margin-top:70px;
+
         .choix{
           width:220px;
           height:45px;
           border:1px solid #336789;
+          outline:none;
           cursor:pointer;
           border-radius:20px;
           margin-top:10px;
-          
+
           &.orange{
             margin-top:-20px;
+
+            &:hover{
+               background:#eee;
+               transition:all 0.5s ease-in-out;
+            }
+             ion-img{
+              width:50px;
+              margin:10px 80px;
+             }
+          }
+          &.moov{
+
+            &:hover{
+               background:#eee;
+               transition:all 0.5s ease-in-out;
+            }
+             ion-img{
+              width:40px;
+              margin:0px 85px;
+             }
+          }
+          &.coris{
+
+            &:hover{
+               background:#eee;
+               transition:all 0.5s ease-in-out;
+            }
+             ion-img{
+              width:50px;
+              margin:10px 85px;
+             }
+          }
+          &.stripe{
+            &:hover{
+               background:#eee;
+               transition:all 0.5s ease-in-out;
+            }
+             ion-img{
+              width:50px;
+              margin:10px 85px;
+             }
           }
         }
       }
@@ -81,10 +125,10 @@ ion-content{
             filter:blur(100px);
           }
           &.circle1,&.circle1::before{
-            background:linear-gradient(90deg, #f00, #00f);
+            background:linear-gradient(90deg, rgb(158, 240, 234), rgb(242, 169, 79));
           }
           &.circle2,&.circle2::before{
-            background:linear-gradient(90deg, #f00, #00f);
+            background:linear-gradient(90deg, rgb(158, 240, 234), rgb(242, 169, 79));
           }
           &.circle1{
             animation:animate1 4s linear infinite;
