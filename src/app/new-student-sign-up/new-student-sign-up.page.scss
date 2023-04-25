@@ -17,17 +17,19 @@ ion-content{--background:linear-gradient(45deg,#15a8d4, #f8a94f);
         position: absolute;
         top: 25px;
         left: 20px;
-        transition: all 0.5s ease-in-out;
+        cursor:pointer;
       }
 
       .form{
         position: relative;
         top: 75px;
-        left: 55px;
+        left: 5px;
 
         form{
           ion-input{
             margin-top: 15px;
+            border: 1px solid #fff;
+            border-radius: 5px;
           }
         }
         ion-button{
@@ -36,10 +38,18 @@ ion-content{--background:linear-gradient(45deg,#15a8d4, #f8a94f);
           margin-left:-5px ;
         }
         a{
-          color: #ce2727;
+          color: #f36609;
           text-decoration: none;
-          margin: 0px 0px 0px 105px;
+          margin: -40px 0px 0px 130px;
+          border-radius: 5px;
+          border: 1px solid #f8a94f;
+          padding: 6px;
           cursor: pointer;
+
+          &:hover{
+            color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+          }
         }
     }
 

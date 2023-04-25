@@ -33,13 +33,13 @@ export class NewStudentHomePage implements OnInit {
     this.nc.navigateForward('/sujets-test')
   }
     async notification() {
-    this.nc.navigateForward('/notification')
+    this.nc.navigateForward('/notification-n')
  }
   async home() {
     this.nc.navigateForward('/new-student-home')
  }
   async quiz() {
-    this.nc.navigateForward('/quiz')
+    this.nc.navigateForward('/quiz-n')
  }
 
 }
