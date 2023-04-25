@@ -1,4 +1,4 @@
-
+// notre environnment de configuration de firebase
 
 export const environment = {
   production: false,
@@ -11,5 +11,5 @@ export const environment = {
   appId: "1:360862749694:web:64a26dd40058db410da6af",
   measurementId: "G-T3QZRZT0XB"
   }
-  
+
 };

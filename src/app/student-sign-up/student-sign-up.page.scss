@@ -3,7 +3,7 @@
     padding: 0;
     outline: none;
 }
-ion-content{--background:linear-gradient(45deg,#ffffff, #ffffff);
+ion-content{--background:linear-gradient(45deg,#15a8d4, #f8a94f);
     .content{
         display: flex;
         justify-content: center;
@@ -112,8 +112,9 @@ ion-content{--background:linear-gradient(45deg,#ffffff, #ffffff);
                 justify-content: center;
                 align-items: center;
                 padding: 14px;
+                
                 span{
-                    color:rgba(255, 255, 255,.3);
+                    color:rgba(27, 26, 26, 0.3);
                     cursor: pointer;
                     & a{
                         color: #f55505;

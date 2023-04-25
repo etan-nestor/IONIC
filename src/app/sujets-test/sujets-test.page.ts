@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavController} from '@ionic/angular'
+import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
 
 @Component({
   selector: 'app-sujets-test',
@@ -12,6 +13,10 @@ export class SujetsTestPage implements OnInit {
 
   ngOnInit() {
   }
+  menu() {
+    
+  }
+
   panier() {
     this.nc.navigateForward('/sujets-payes')
   }

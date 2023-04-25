@@ -1,3 +1,5 @@
+
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -6,13 +8,42 @@
     <ion-title>Sujets-test</ion-title>
   </ion-toolbar>
   <div class="card-back">
-    <ion-button fill="clear" class="menu">
-      <ion-icon slot="icon-only" name="menu" ></ion-icon>
-    </ion-button>
+    <div class="menu-container">
+      <div class="button">
+        <ion-button fill="clear" class="menu" (click)="menu()">
+          <ion-icon slot="icon-only" name="menu" ></ion-icon>
+       </ion-button>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Admins</a></li>
+      </ul>
+    </div>
     <ion-button fill="clear" class="panier" (click)="panier()">
       <ion-icon slot="icon-only" name="cart"></ion-icon>
     </ion-button>
   </div>
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.button').click(function(){
+        if($(this).hasClass('expand')){
+          $('ul').slideUp(function(){
+             $('.button').removeClass('expand');
+          })
+        }else{
+          $(this).addClass('expand');
+          setTimeout(function(){
+            $('ul').stop().slideDown();
+          },200)
+        }
+      })
+    });
+  </script> -->
+
 </ion-header>
 
 <ion-content [scrollEvents]="true">

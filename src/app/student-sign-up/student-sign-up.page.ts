@@ -45,11 +45,7 @@ export class StudentSignUpPage implements OnInit {
       email: this.email,
       password:this.pass
     })
-    // const db = getDatabase();
-    // set(ref(db, '/users/'+this.id ),{INE:this.INE,username:this.username,email:this.email,password:this.pass})
-    // window.alert('ecriture success ')
-    // console.log("Document written with ID: ", (await docRef).id);
-    // this.router.navigateByUrl('/login')
+
    }catch(e){
     window.alert(e)
      this.router.navigateByUrl('signup')

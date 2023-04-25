@@ -6,80 +6,63 @@
 ion-content{
     min-height: 100vh;
     --background: #0c192c;
+    
 
-    .container{
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
+    .main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
 
-        .bubbles{
-            position: relative;
-            display: flex;
-
-            & span{
-            position: relative;
-            height: 20px;
-            width: 20px;
-            background: #4fc3dc;
-            margin: 0px 4px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #4fc3dc44,
-            0 0 50px #4fc3dc,
-            0 0 100px #4fc3dc;
-            animation: animate 15s linear infinite;
-            animation-duration: calc(120s / var(--i));
-
-            }
-            & span:nth-child(even){
-                background: #f55505;
-                box-shadow: 0 0 10px #f5550544,
-                0 0 50px #f55505,
-                0 0 100px #f55505;
-            }
-            @keyframes animate {
-                0%{
-                    transform: translateY(100vh) scale(0);
-                }
-                100%{
-                    transform: translateY(-10vh) scale(1);
-                }
-            }
+        .img{
+          position:absolute;
+          top:60px;
+          ion-img{
+            width:200px;
+          }
         }
 
-        .buttons{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 460px;
-
-            .skip{
-                padding-bottom: 10px;
-            }
-            .next{
-                padding: 10px;
-
-            }
-
-            ion-button{
-                outline: none;
-                border: none;
-                width: 150px;
-                height: 30px;
-            }
+      .buttons{
+        position:absolute;
+        top:450px;
+        
+        .next{
+        margin-bottom:10px;
         }
-        .logo{
-            position: absolute;
-            top:200px;
-            left: 40px;
+       ion-button{
+        height:40px;
+        width:145px;
+       }
+      }
 
-            img{
-                width: 200px;
-                cursor: pointer;
-            }
+        .content{
+          position:relative;
+          margin-top:80px;
         }
+        .content h2{
+          position:absolute;
+          color:#fff;
+          transform:translate(-50%,-50%);
+          font-size:5em;
 
-    }
+          &:nth-child(1){
+            color:transparent;
+            -webkit-text-stroke:3px #03a9f4;
+          }
+          &:nth-child(2){
+            color:#03a9f4;
+            animation:animate 4s ease-in-out infinite;
+          }
+        }
+        
+        @keyframes animate{
+          0%,100%{
+              clip-path: polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
+          }
+          50%{
+              clip-path: polygon(0 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%);
+          }
+        }
+      }
 
 }

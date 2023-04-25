@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'splash-screen',
+    redirectTo: 'student-home',
     pathMatch: 'full'
   },
   {
@@ -54,6 +54,30 @@ const routes: Routes = [
   {
     path: 'sujets-non-payes',
     loadChildren: () => import('./sujets-non-payes/sujets-non-payes.module').then( m => m.SujetsNonPayesPageModule)
+  },
+  {
+    path: 'admins',
+    loadChildren: () => import('./admins/admins.module').then( m => m.AdminsPageModule)
+  },
+  {
+    path: 'admin-dev',
+    loadChildren: () => import('./admin-dev/admin-dev.module').then( m => m.AdminDevPageModule)
+  },
+  {
+    path: 'admin-adm',
+    loadChildren: () => import('./admin-adm/admin-adm.module').then( m => m.AdminAdmPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'anciens-sujets',
+    loadChildren: () => import('./anciens-sujets/anciens-sujets.module').then( m => m.AnciensSujetsPageModule)
+  },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
   },
 ];
 
