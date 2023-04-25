@@ -1,9 +1,48 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Options-pay</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="sujets-test"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Opt-pay</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true">
+    <div class="anim">
+      <div class="container">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+      </div>
+      <svg>
+        <filter id="gooey" >
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 -20 -10
+          " />
+        </filter>
+      </svg>
+    </div>
+    <div class="pay">
+        <div class="text">
+          <p>Choisir votre Option de payment</p>
+          <p>Payer avec surete !!</p>
+        </div>
+        <div class="choice">
+          <div class="choix orange">
+            <ion-img source="../../assets/images/orange.jpg" />
+          </div>
+          <div class="choix mobicash">
+            <ion-img source="../../assets/images/moov.jpg" />
+          </div>
+          <div class="choix telecel">
+            <ion-img source="../../assets/images/coris.jpg" />
+          </div>
+          <div class="choix stripe">
+            <ion-img source="../../assets/images/stripe.jpg" />
+          </div>
+        </div>
+    </div>
 </ion-content>

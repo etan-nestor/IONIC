@@ -1,0 +1,126 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ion-content{
+  --background:#fff;
+
+    .pay{
+      z-index:10;
+
+      .text{
+        color:black;
+        font-weight:bold;
+        font-size:16px;
+        text-align:center;
+        margin-top:-280px;
+        cursor:pointer;
+        p{
+        padding-top:5px;
+        }
+      }
+
+      .choice{
+        margin-left:30px;
+        margin-top:70px;
+        .choix{
+          width:220px;
+          height:45px;
+          border:1px solid #336789;
+          cursor:pointer;
+          border-radius:20px;
+          margin-top:10px;
+          
+          &.orange{
+            margin-top:-20px;
+          }
+        }
+      }
+    }
+
+    .anim{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:75vh;
+      overflow:hidden;
+
+
+
+      svg{
+        height:0;
+        width:0;
+      }
+
+      .container{
+        position:relative;
+        width:250px;
+        display:flex;
+        justify-content:space-between;
+        margin-top:-300px;
+        // filter:url(#gooey);
+
+        & .circle{
+          position:relative;
+          min-width:100px;
+          height:100px;
+          border-radius:50%;
+          background:#fff;
+
+          &::before{
+            content:'';
+            position:absolute;
+            top:-50px;
+            left:-50px;
+            right:-50px;
+            bottom:-50px;
+            border-radius:50%;
+            background: #f5f5f5;
+            z-index:-1;
+            filter:blur(100px);
+          }
+          &.circle1,&.circle1::before{
+            background:linear-gradient(90deg, #f00, #00f);
+          }
+          &.circle2,&.circle2::before{
+            background:linear-gradient(90deg, #f00, #00f);
+          }
+          &.circle1{
+            animation:animate1 4s linear infinite;
+          }
+          @keyframes animate1{
+            0%{
+              transform:translateX(0) rotate(0deg);
+            }
+            30%{
+              transform:translateX(75px) rotate(240deg);
+            }
+            60%{
+              transform:translateX(75px) rotate(480deg);
+            }
+            100%{
+              transform:translateX(0) rotate(720deg);
+            }
+          }
+          &.circle2{
+            animation:animate2 4s linear infinite;
+          }
+          @keyframes animate2{
+            0%{
+              transform:translateX(0) rotate(0deg);
+            }
+            30%{
+              transform:translateX(-75px) rotate(-240deg);
+            }
+            60%{
+              transform:translateX(-75px) rotate(-480deg);
+            }
+            100%{
+              transform:translateX(0) rotate(-720deg);
+            }
+          }
+        }
+      }
+    }
+}
