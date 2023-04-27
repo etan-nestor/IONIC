@@ -111,6 +111,7 @@ ion-content{
           height:100px;
           border-radius:50%;
           background:#fff;
+          cursor:pointer;
 
           &::before{
             content:'';
@@ -125,10 +126,10 @@ ion-content{
             filter:blur(100px);
           }
           &.circle1,&.circle1::before{
-            background:linear-gradient(90deg, rgb(158, 240, 234), rgb(242, 169, 79));
+            background:linear-gradient(90deg, rgb(106, 168, 164), rgb(242, 169, 79));
           }
           &.circle2,&.circle2::before{
-            background:linear-gradient(90deg, rgb(158, 240, 234), rgb(242, 169, 79));
+            background:linear-gradient(90deg, rgb(106, 168, 164), rgb(242, 169, 79));
           }
           &.circle1{
             animation:animate1 4s linear infinite;

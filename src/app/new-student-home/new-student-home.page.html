@@ -5,9 +5,20 @@
     </ion-buttons>
   </ion-toolbar>
   <div class="card-back">
-    <ion-button fill="clear" class="menu">
-      <ion-icon slot="icon-only" name="menu" ></ion-icon>
-    </ion-button>
+    <div class="menu-container">
+      <div class="button">
+        <ion-button fill="clear" class="menu" (click)="menu()">
+          <ion-icon slot="icon-only" name="menu" ></ion-icon>
+       </ion-button>
+      </div>
+      <ul *ngIf="isMenuOpen">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Admins</a></li>
+      </ul>
+    </div>
   </div>
     <div class="user-profil">
       <ion-card>

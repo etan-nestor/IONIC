@@ -1,5 +1,4 @@
 // notre environnment de configuration de firebase
-
 export const environment = {
   production: false,
   firebaseConfig :{

@@ -9,10 +9,14 @@ import { LoadingController } from '@ionic/angular';
   styleUrls: ['./new-student-home.page.scss'],
 })
 export class NewStudentHomePage implements OnInit {
-
+  isMenuOpen: boolean = false;
   constructor(public nc: NavController,public lc:LoadingController) { }
 
   ngOnInit() {
+  }
+
+  menu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
   async infos_ibam() {
     let load = await this.lc.create({

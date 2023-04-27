@@ -9,18 +9,20 @@ import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
 })
 export class SujetsTestPage implements OnInit {
 
+  isMenuOpen: boolean = false;
+
   constructor( public nc:NavController) { }
 
   ngOnInit() {
   }
   menu() {
-    
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   panier() {
     this.nc.navigateForward('/sujets-payes')
   }
-  
+
   loadMore(event:any) {
   // Effectuer une requête AJAX pour charger plus de données
   // Ajouter les données nouvellement chargées à votre contenu existant
